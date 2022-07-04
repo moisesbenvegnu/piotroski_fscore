@@ -195,7 +195,7 @@ Importante:
 - Para saber mais sobre este indicador: https://bit.ly/3R2hYRj
 '''
 
-
+st.markdown('Desenvolvimento: Moises Benvegnu')
 
 
 
