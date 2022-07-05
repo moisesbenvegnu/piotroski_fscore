@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 @author: Moises Benvegnu
-
 """
 
 import streamlit as st
@@ -9,6 +8,8 @@ import yfinance as yf
 import pandas as pd
 
 st.title('Piotroski F-Score')
+
+st.markdown('Uma forma simples de avaliar a saúde financeira de empresas listadas em bolsa')
 
 st.image('capa.png')
 
@@ -176,7 +177,7 @@ else:
     
         score = [score1, score2, score3, score4, score5, score6, score7, score8, score9]
         
-        dic = {'Indice': indice, 'Critério': criterios, 'Pontos': score}
+        dic = {'Indice': indice, 'Critério': criterios, 'Score': score}
         
         df = pd.DataFrame(dic)
         
@@ -195,7 +196,7 @@ Importante:
 - Para saber mais sobre este indicador: https://bit.ly/3R2hYRj
 '''
 
-st.markdown('Desenvolvimento: Moises Benvegnu')
+st.markdown('Desenvolvido por Moises A. Benvegnu')
 
 
 
