@@ -5,5 +5,7 @@ O método desenvolvido por Joseph D. Piotroski tem o objetivo de avaliar a saúd
 
 Os dados utilizados nas avaliações foram importadas do Yahoo Finance através da bilbioteca yfinance do Python.
 
+Link para o aplicativo: https://moisesbenvegnu-piotroski-fscore-fscore-swkzvm.streamlitapp.com/
+
  ![app_streamlit](https://user-images.githubusercontent.com/108688069/177235784-39f31c1e-93c6-4002-b255-2684bf03b7a4.png)
 
