@@ -88,10 +88,8 @@ else:
     try:
         # Criterios Piotroski F-Score    
     
-        # 1. Return on Asset (ROA) > 0
-        average_assets1 = (total_assets_current + total_assets_previous1)/2
-        
-        if net_income_current/average_assets1 > 0:
+        # 1. Return on Asset (ROA) > 0          
+        if net_income_current/total_assets_current > 0:
             score1 = 1
         else:
             score1 = 0
@@ -145,6 +143,7 @@ else:
             score8 = 0
     
         #9. Asset Turnover Ratio Current Year > Asset Turnover Ratio Previous Year
+        average_assets1 = (total_assets_current + total_assets_previous1)/2
         average_assets2 = (total_assets_previous1 + total_assets_previous2)/2
     
         turnover_current = total_revenue_current/average_assets1
