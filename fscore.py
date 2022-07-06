@@ -86,9 +86,9 @@ else:
         st.info('Não há informações disponíveis para este ativo')
     
     try:
-        #Criterios Piotroski F-Score    
+        # Criterios Piotroski F-Score    
     
-        # 1. Return on Asset (ROA) > 0 (Score +1)
+        # 1. Return on Asset (ROA) > 0
         average_assets1 = (total_assets_current + total_assets_previous1)/2
         
         if net_income_current/average_assets1 > 0:
@@ -96,31 +96,31 @@ else:
         else:
             score1 = 0
         
-        # 2. Operating Cash Flow (OCF) > 0 (Score +1)
+        # 2. Operating Cash Flow (OCF) > 0
         if operating_cashflow > 0:
             score2 = 1
         else:
             score2 = 0
             
-        # 3. ROA Current Year  > ROA Previous Year (Score +1)
+        # 3. ROA Current Year  > ROA Previous Year
         if net_income_current/total_assets_current > net_income_previous/total_assets_previous1:
             score3 = 1
         else:
             score3 = 0
         
-        # 4. CFO > Net Income (Score +1)
+        # 4. CFO > Net Income
         if operating_cashflow > net_income_current:
             score4 = 1
         else:
             score4 = 0
     
-        # 5. Long Term Debt Current Year < Long Term Debt Previous Year (Score +1)
+        # 5. Long Term Debt Current Year < Long Term Debt Previous Year
         if longtermdebt_current < longtermdebt_previous:
             score5 = 1
         else:
             score5 = 0
     
-        # 6. Current Ratio Current Year > Current Ratio Previous Year (Score +1)
+        # 6. Current Ratio Current Year > Current Ratio Previous Year
         ratio1 = total_current_assets_current/total_current_liabilities_current
         ratio2 = total_current_assets_previous/total_current_liabilities_previous
     
@@ -129,13 +129,13 @@ else:
         else:
             score6 = 0
     
-        # 7. No new shares issued in the last year (Score+1)
+        # 7. No new shares issued in the last year
         if common_stock_current > common_stock_previous:
             score7 = 0
         else:
             score7 = 1
     
-        # 8. Gross Margin Current Year > Gross Margin Previous Year (Score +1)
+        # 8. Gross Margin Current Year > Gross Margin Previous Year
         gross_margin_current = gross_profit_current/total_revenue_current
         gross_margin_previous = gross_profit_previous/total_revenue_previous
     
@@ -144,7 +144,7 @@ else:
         else:
             score8 = 0
     
-        #9. Asset Turnover Ratio Current Year > Asset Turnover Ratio Previous Year (Score + 1)
+        #9. Asset Turnover Ratio Current Year > Asset Turnover Ratio Previous Year
         average_assets2 = (total_assets_previous1 + total_assets_previous2)/2
     
         turnover_current = total_revenue_current/average_assets1
